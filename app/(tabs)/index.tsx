@@ -4,19 +4,12 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-
+import Employer from '../nhatuyendung/employer'; // Import Employer component
+import Login from '../loginWithGoogle/Login'; // Import login component
 export default function HomeScreen() {
   return (
-    <><View style={styles.container}>
-      <Text style={styles.context}>Home</Text>
-      <Text style={styles.context}>Welcome to the Expo example app!</Text>
-      <ImageBackground>
-        <Image source={require('../../assets/images/react-logo.png')} style={styles.reactLogo} />
-      </ImageBackground>
-    </View>
-      <View style={styles.main}>
-        <Text>toi la Uyen</Text>
-      </View></>
+    <Login/> // Use login component
+    // <Employer /> // Use Employer component
   );
 }
 
@@ -25,35 +18,19 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ffffff',
-  },
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+    backgroundColor: 'ffffff',
   },
   context: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
-    textAlign: 'center',
-    marginVertical: 24,
-    color: '#00000',
   },
   reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+    width: 100,
+    height: 100,
   },
   main: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    position: 'absolute',
   },
 });
